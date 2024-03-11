@@ -1,0 +1,139 @@
+<div
+  {% if page.handle != 'contact' %}
+    class="block"
+  {% endif %}
+>
+  <div class="container--medium">
+    <div>
+      <div class="">
+        {%- form 'contact', class: 'form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="alert alert--success">{{ 'contact.form.successfully_sent' | t }}</p>
+          {%- endif -%}
+
+          {%- if form.errors -%}
+            <div class="alert alert--error" id="contact-form-error">
+              <ul class="alert__error-list" role="list">
+                {%- for field in form.errors -%}
+                  {%- if field == 'form' -%}
+                    <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
+                  {%- else -%}
+                    <li class="alert__error-item">
+                      {{ form.errors.translated_fields[field] | capitalize }}
+                      {{ form.errors.messages[field] }}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+
+          <input type="hidden" name="Bulk Inquiry" value="No">
+          <input type="hidden" name="Product" value="{{product.title}}">
+          <div class="form__input-row">
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input
+                id="contact-form-email"
+                type="email"
+                class="form__field form__field--text {% if customer.email != blank %}is-filled{% endif %}"
+                name="contact[email]"
+                aria-label="{{ 'contact.form.email' | t }}"
+                {% if customer %}
+                  value="{{ customer.email }}"
+                {% endif %}
+                {% if form.errors contains 'email' %}
+                  required aria-invalid="true" aria-describedby="contact-form-error"
+                {% endif %}
+              >
+              <label for="contact-form-email" class="form__floating-label">{{ 'contact.form.email' | t }}</label>
+            </div>
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <input
+                id="contact-form-name"
+                type="text"
+                class="form__field form__field--text {% if customer.name != blank %}is-filled{% endif %}"
+                name="contact[name]"
+                aria-label="{{ 'contact.form.name' | t }}"
+                required
+                {% if customer %}
+                  value="{{ customer.name }}"
+                {% endif %}
+              >
+              <label for="contact-form-name" class="form__floating-label"
+                >Quantity {% comment %}{{ 'contact.form.name' | t }}{% endcomment %}
+              </label>
+            </div>
+          </div>
+
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <div id="contact-form-{{ field_title | handle }}" class="select-wrapper select-wrapper--primary">
+              {%- render 'icon', icon: 'arrow-bottom' -%}
+
+              <select name="contact[{{ field_title | escape }}]" required title="{{ block.settings.title_2 | escape }}">
+                <option value="" disabled selected></option>
+                <option value="{{ block.settings.option_1 }}">{{ block.settings.option_1 }}</option>
+                <option value="{{ block.settings.option_2 }}">{{ block.settings.option_2 }}</option>
+                <option value="{{ block.settings.option_3 }}">{{ block.settings.option_3 }}</option>
+              </select>
+            </div>
+
+            <label for="contact-form-{{ field_title | handle }}" class="form__floating-label">
+              {{- block.settings.title_2 -}}
+            </label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <textarea
+              id="contact-form-message"
+              name="contact[body]"
+              rows="3"
+              class="form__field form__field--textarea"
+              aria-label="{{ 'contact.form.message' | t }}"
+              required
+            ></textarea>
+            <label for="contact-form-message" class="form__floating-label">{{ 'contact.form.message' | t }}</label>
+          </div>
+
+          <button
+            type="submit"
+            class="form__submit {% unless block.settings.show_store_info %}form__submit--centered{% endunless %} button button--secondary button--min-width"
+          >
+            Submit Request{% comment %}{{ 'contact.form.submit' | t }}{% endcomment %}
+          </button>
+        {%- endform -%}
+      </div>
+
+      {%- if block.settings.show_store_info -%}
+        <div class="layout__section layout__section--large-secondary">
+          <div class="contact__store-info">
+            {%- if block.settings.store_heading != blank -%}
+              <h2 class="contact__store-heading heading h3">{{ block.settings.store_heading | escape }}</h2>
+            {%- endif -%}
+
+            {%- if block.settings.store_image -%}
+              <div class="contact__store-image">
+                <div
+                  class="aspect-ratio"
+                  style="padding-bottom: {{ 100.0 | divided_by: block.settings.store_image.aspect_ratio }}%"
+                >
+                  <img
+                    loading="lazy"
+                    width="{{ block.settings.store_image.width }}"
+                    height="{{ block.settings.store_image.height }}"
+                    src="{{ block.settings.store_image | img_url: '700x' }}"
+                    alt="{{ block.settings.store_image.alt | escape }}"
+                  >
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.store_info != blank -%}
+              <div class="contact__store-text rte">
+                {{ block.settings.store_info }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

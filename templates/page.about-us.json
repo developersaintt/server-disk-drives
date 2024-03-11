@@ -1,0 +1,252 @@
+{
+  "sections": {
+    "b783eabb-fbe4-43ad-a373-beb15115f20a": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "",
+        "include_margins": false,
+        "liquid": "<center><h1 class=\"h1\">About Us<\/h1><\/center>"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "c7944428-15b6-4146-a937-3b39acdeb307": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/the-inside-of-the-hard.jpg",
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Welcome to ServerDiskDrives",
+        "content": "<p>ServerDiskDrives.com - a division of American Technology Products was established in 2012 and is located in Sanford, Florida. Our 12,000 sq. ft warehouse facility has the equipment and experienced staff needed to meet the most rigorous IT hardware requirement. We are committed to offer products at competitive prices, prompt shipments, hassle-free returns, and warranty support. We know customers are looking for Quality, Price and Service while making their decisions on what to buy and where to buy. That is why we leverage our years of experience and expertise in procurement and supply of computer components.<\/p>",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "background_color": "#48b448",
+        "padding_top_1": 48,
+        "padding_bottom_2": 48
+      }
+    },
+    "bf17831b-0336-4e77-9d49-3c5fe1e8a6f3": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shutterstock_72811141-21_1600x_65ec0400-eb40-4c68-aaec-4c2ee14a13c3.png",
+        "image_position": "right",
+        "image_width": 50,
+        "title": "Who We Are",
+        "content": "<p>We are an Independent distributor of Computer Systems and Components with over 10,000 items in stock or available to ship same day as ordered. Our standard 1-Year warranty on all products and FREE 2-3 days delivery service is something all our customers love, and we ensure that we provide customers with prompt and unmatched service experience. Whether you are looking for a server option, desktop option, or laptop option, we carry it all. Whether you are buying for your business\/organization, or for yourself as home user, or a re-seller who is looking for us to blind ship to your customers, we can do it all.  <\/p>",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "background_color": "",
+        "padding_top_1": 0,
+        "padding_bottom_2": 0
+      }
+    },
+    "7c705342-9e15-4f26-9512-46a12de2c1cc": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shutterstock_1047618076-21_1600x_add3edc7-fb01-44d0-927b-4691a5ebebef.png",
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Why Choose Server Disk Drives",
+        "content": "<ol><li><strong>Quality Assurance<\/strong>:<br\/> We curate our collection from trusted brands known for their reliability and performance. Each product undergoes rigorous quality checks to ensure you get nothing but the best.<\/li><li><strong>Expert Guidance<\/strong>: <br\/>Our team consists of tech enthusiasts and experts who are passionate about what they do. Whether you're a beginner or a seasoned professional, we are here to provide personalized guidance to help you make informed decisions.<\/li><li><strong>Wide Selection<\/strong>: <br\/>Explore a diverse range of hard disks and drives, from high-capacity external hard drives to lightning-fast SSDs. Whatever your storage needs, we have the perfect solution for you.<\/li><li><strong>Customer-Centric Approach<\/strong>: <br\/>Your satisfaction is our priority. We go the extra mile to provide exceptional customer service, from pre-purchase inquiries to after-sales support.<\/li><\/ol>",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "background_color": "",
+        "padding_top_1": 0,
+        "padding_bottom_2": 0
+      }
+    },
+    "38b06b17-1443-486f-806c-8cc7fc04653e": {
+      "type": "rich-text",
+      "settings": {
+        "text_width": "narrow",
+        "title": "We Value The Relationship",
+        "content": "<p>We value the relationship we build with our customers. Feel free to reach out to us with any questions, concerns, or just to geek out about the latest in storage technology. Follow us on social media to stay updated on the latest products, tech tips, and exclusive offers.<\/p>",
+        "custom_liquid": "",
+        "button_text": "Our products",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "7a4cbd5d-60cf-42fe-8798-de3b6720704d": {
+      "type": "faq",
+      "blocks": {
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-separator-1": {
+          "type": "separator",
+          "settings": {
+            "title": "Frequently asked Questions"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "How long does it take for me to receive my order?",
+            "answer": "<p>Orders placed on regular business day before 4.00PM EST are shipped out same day. Estimated delivery within USA is between 1-3 business days<\/p>"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "What is your return and exchange policy?",
+            "answer": "<p>We offer 30 days refund or exchange policy and standard 1 year replacement warranty on all items.<\/p>"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-3": {
+          "type": "question",
+          "settings": {
+            "title": "How do I change my shipping address?",
+            "answer": "<p>Shipping address can be changed before the order is marked as shipped by contacting us with the order number<\/p>"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-4": {
+          "type": "question",
+          "settings": {
+            "title": "How do I track the status of my order?",
+            "answer": "<p>Tracking number and shipping company name is provided once order is shipped and tracking numbers can be tracked online via fedex or usps website. If you created an account before placing an order (in other words, you did not place the order as a guest), then you will have a copy of order in your account section with tracking number on it – as soon as the order has been fulfilled.<\/p>"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-5": {
+          "type": "question",
+          "settings": {
+            "title": "How do I receive customer support?",
+            "answer": "<p>Various ways to contact us for support. You can email us, call us or connect with us via chat on the website.<\/p>"
+          }
+        },
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-6": {
+          "type": "question",
+          "settings": {
+            "title": "What do I do if I entered an incorrect shipping address?",
+            "answer": "<p>Contact us with correct address however please note that shipping address can not be changed once order has been marked shipped. <\/p>"
+          }
+        },
+        "0dd4e06c-9c19-410a-9415-b333514a0ed6": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship to my country?",
+            "answer": "<p>We ship to most International destinations as required by laws in the United States. Please contact us for a quote.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-separator-1",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-1",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-2",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-3",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-4",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-5",
+        "template--17031626227956__7a4cbd5d-60cf-42fe-8798-de3b6720704d-question-6",
+        "0dd4e06c-9c19-410a-9415-b333514a0ed6"
+      ],
+      "settings": {
+        "show_contact_info": false,
+        "contact_info_heading": "Any question?",
+        "contact_info_text": "<p>If we still haven't answered your question, you can contact us below and we will get back to you as soon as possible.<\/p>",
+        "contact_1_icon": "bi-phone",
+        "contact_1_heading": "Customer support",
+        "contact_1_text": "<p>Enter your text here<\/p>",
+        "contact_2_icon": "bi-email",
+        "contact_2_heading": "Send a message",
+        "contact_2_text": "<p>Enter your text here<\/p>"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Newsletter",
+        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+        "background": "#1e2d7d",
+        "text": "#ffffff"
+      }
+    },
+    "6306c227-3871-4258-95f9-029d3fa7f4a5": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wd800bb_hard_drive__27938_1__95818.jpg",
+            "link": "shopify:\/\/collections\/server-hard-drives"
+          }
+        },
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hpe_830272-b21_1600w_flex_slot_platinum_hot_plug_power_supply__68797.jpg",
+            "link": "shopify:\/\/collections\/power-supply"
+          }
+        },
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49Y4252_b238a140-32a0-42de-9d11-4dd0b2bc01f4.jpg",
+            "link": "shopify:\/\/collections\/raid-controllers"
+          }
+        },
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9V4DG.png",
+            "link": "shopify:\/\/collections\/dell-equallogic-drives"
+          }
+        },
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/732136-001-Lotof4.png",
+            "link": "shopify:\/\/collections\/clearance"
+          }
+        },
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/qw972a__69690.png",
+            "link": "shopify:\/\/collections\/host-bus-adapters"
+          }
+        }
+      },
+      "block_order": [
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-1",
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-2",
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-3",
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-4",
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-5",
+        "template--17031626227956__6306c227-3871-4258-95f9-029d3fa7f4a5-logo-6"
+      ],
+      "settings": {
+        "title": "",
+        "link_title": "",
+        "link": ""
+      }
+    },
+    "168483268730521a83": {
+      "type": "apps",
+      "blocks": {
+        "3553088e-c581-40f8-808a-a2c9016e6e4a": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "RNrypK"
+          }
+        }
+      },
+      "block_order": [
+        "3553088e-c581-40f8-808a-a2c9016e6e4a"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "b783eabb-fbe4-43ad-a373-beb15115f20a",
+    "main",
+    "c7944428-15b6-4146-a937-3b39acdeb307",
+    "bf17831b-0336-4e77-9d49-3c5fe1e8a6f3",
+    "7c705342-9e15-4f26-9512-46a12de2c1cc",
+    "38b06b17-1443-486f-806c-8cc7fc04653e",
+    "7a4cbd5d-60cf-42fe-8798-de3b6720704d",
+    "newsletter",
+    "6306c227-3871-4258-95f9-029d3fa7f4a5",
+    "168483268730521a83"
+  ]
+}

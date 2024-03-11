@@ -1,0 +1,117 @@
+<div class="icon-with-text-parent">
+  {% if block.settings.block_icon != blank %}
+    <div class="icon-with-text">
+      {% if block.settings.block_icon != blank %}
+        <div class="icon--wrapper">
+          {{-
+            block.settings.block_icon
+            | image_url: width: block.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              sizes: 'min(100vw, 520px)',
+              widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+          -}}
+        </div>
+      {% endif %}
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading }}</h4>
+        <p>{{ block.settings.icon_text }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.block_icon_2 != blank %}
+    <div class="icon-with-text">
+      <div class="icon--wrapper">
+        {{-
+          block.settings.block_icon_2
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            sizes: 'min(100vw, 520px)',
+            widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+        -}}
+      </div>
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading_2 }}</h4>
+        <p>{{ block.settings.icon_text_2 }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.block_icon_3 != blank %}
+    <div class="icon-with-text">
+      <div class="icon--wrapper">
+        {{-
+          block.settings.block_icon_3
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            sizes: 'min(100vw, 520px)',
+            widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+        -}}
+      </div>
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading_3 }}</h4>
+        <p>{{ block.settings.icon_text_3 }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.block_icon_4 != blank %}
+    <div class="icon-with-text">
+      <div class="icon--wrapper">
+        {{-
+          block.settings.block_icon_4
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            sizes: 'min(100vw, 520px)',
+            widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+        -}}
+      </div>
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading_4 }}</h4>
+        <p>{{ block.settings.icon_text_4 }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.block_icon_5 != blank %}
+    <div class="icon-with-text">
+      <div class="icon--wrapper">
+        {{-
+          block.settings.block_icon_5
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            sizes: 'min(100vw, 520px)',
+            widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+        -}}
+      </div>
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading_5 }}</h4>
+        <p>{{ block.settings.icon_text_5 }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.block_icon_6 != blank %}
+    <div class="icon-with-text">
+      <div class="icon--wrapper">
+        {{-
+          block.settings.block_icon_6
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            sizes: 'min(100vw, 520px)',
+            widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+        -}}
+      </div>
+      <div class="content--wrapper">
+        <h4 class="h5">{{ block.settings.icon_heading_6 }}</h4>
+        <p>{{ block.settings.icon_text_6 }}</p>
+      </div>
+    </div>
+  {% endif %}
+</div>

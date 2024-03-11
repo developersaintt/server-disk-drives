@@ -1,0 +1,106 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-delivery",
+            "title": "Fast & Free Shipping!",
+            "content": "<p>Order by 3.30pm EST. (mon-fri) and get it delivered free in 2 business days.<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-returns",
+            "title": "Satisfied or refunded",
+            "content": "<p>We offer 30 days refunds or exchange policy and standard 1 year replacement warranty on all items.<\/p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-customer-support",
+            "title": "Top-notch support",
+            "content": "<p>We have a designated support team to help with any issues you may encounter.<\/p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-secure-payment",
+            "title": "Secure payments",
+            "content": "<p>Payments through our site are completely secure.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "settings": {
+        "stack_mobile": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "settings": {
+            "title": "About US",
+            "content": "<p>Founded in 2012 in Sanford, Florida. We offer competitive pricing, prompt shipments, hassle-free returns, and warranty support, prioritizing quality, price, and service.<\/p>"
+          }
+        },
+        "02fd1ae3-e228-40b3-b6e2-da93aeddcef7": {
+          "type": "text",
+          "settings": {
+            "title": "Contact us",
+            "content": "<p>211 Northstar Court, Sanford Florida 32771<\/p><p>TEL: <a href=\"tel:(407) 960-1722\" target=\"_blank\" title=\"tel:(407) 960-1722\">(407) 960-1722<\/a><\/p><p>Email: <a href=\"mailto:sales@serverdiskdrives.com\" target=\"_blank\" title=\"mailto:sales@serverdiskdrives.com\">sales@serverdiskdrives.com<\/a><\/p>"
+          }
+        },
+        "footer-1": {
+          "type": "links",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "footer-2": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "subheading": "<p>Sign up today and receive lowest price deals and coupon codes<\/p>"
+          }
+        },
+        "acae8239-3ccb-48b0-b40e-a11f48640770": {
+          "type": "trust-icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "02fd1ae3-e228-40b3-b6e2-da93aeddcef7",
+        "footer-1",
+        "footer-2",
+        "acae8239-3ccb-48b0-b40e-a11f48640770"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "enable_follow_on_shop": false,
+        "show_payment_icons": true,
+        "show_locale_selector": true,
+        "show_country_selector": true
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
+}

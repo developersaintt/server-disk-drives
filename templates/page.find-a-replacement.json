@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "168483268730521a83": {
+      "type": "apps",
+      "blocks": {
+        "3553088e-c581-40f8-808a-a2c9016e6e4a": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "RNrypK"
+          }
+        }
+      },
+      "block_order": [
+        "3553088e-c581-40f8-808a-a2c9016e6e4a"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "f102872b-95fe-4aab-a9ad-ca4206da3826": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DM_8000_HD_PVR_-_014.jpg",
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Why Choose Our Replacement Parts:",
+        "content": "<ol><li><strong>Compatibility Assurance:<\/strong> Our replacement parts are carefully curated to ensure compatibility with a wide range of hard disks and drives. You can trust that the parts you purchase will seamlessly integrate with your existing setup.<\/li><li><strong>Quality Guarantee:<br\/><\/strong> We source replacement parts from reputable manufacturers, ensuring that you receive high-quality components that meet or exceed industry standards. Your satisfaction and the performance of your storage devices are our top priorities.<\/li><li><strong>Expert Assistance:<br\/><\/strong>Not sure which replacement part you need? Our knowledgeable support team is here to assist you. Feel free to reach out with any questions, and we'll guide you to the right solution.<\/li><\/ol>",
+        "button_text": "Our products",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "bdbb7ff0-a985-4b81-b16b-0cb79b713712": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "",
+        "include_margins": true,
+        "liquid": "<center><h1 class=\"h1\" style=\"margin-bottom: 30px;\">Find a replacement part<\/h1><\/center>\n[cp24Form1683516615]"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "168483268730521a83",
+    "f102872b-95fe-4aab-a9ad-ca4206da3826",
+    "bdbb7ff0-a985-4b81-b16b-0cb79b713712"
+  ]
+}

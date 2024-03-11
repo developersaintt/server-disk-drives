@@ -1,0 +1,110 @@
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "text": "Orders placed by 4PM EST ship out same day.",
+        "text_position": "center",
+        "link": "",
+        "show_newsletter": true,
+        "newsletter_button": "Subscribe & Save",
+        "newsletter_title": "Newsletter",
+        "newsletter_content": "<p>Sign up today and receive our lowest price deals and coupon codes<\/p>"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "c61d830b-4261-4981-b51b-0b5fcf1b851b": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Catalog",
+            "image_1": "shopify:\/\/shop_images\/ATPcompatiblewithdellserversffhdd.png",
+            "image_1_heading": "All Collections",
+            "image_1_text": "",
+            "image_1_link": "shopify:\/\/collections",
+            "image_2": "shopify:\/\/shop_images\/RWV5D-CML.png",
+            "image_2_heading": "10TB Hard Drives",
+            "image_2_text": "",
+            "image_2_link": "shopify:\/\/collections\/capacity_10tb"
+          }
+        },
+        "cd6f5e11-adb4-42c1-a837-f9f4127e7d36": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Support & Contact us",
+            "image_1": "shopify:\/\/shop_images\/DellHUS156060VLS600W348K600gb15k3.5inSASHardDrive-1.png",
+            "image_1_heading": "Dell TWNM1 2TB Hard Drive",
+            "image_1_text": "",
+            "image_1_link": "shopify:\/\/products\/dell-twnm1-2tb-7-2k-rpm-sas-6gbps-3-5-hard-drive",
+            "image_2": "shopify:\/\/shop_images\/quad-port-intel.jpg",
+            "image_2_heading": "Intel",
+            "image_2_text": "",
+            "image_2_link": "shopify:\/\/collections\/intel"
+          }
+        },
+        "88db7d33-f635-47b8-bb51-eb197ba10b49": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Browse By Collection",
+            "image_1": "shopify:\/\/shop_images\/hpe_flexfabric_10gb_4-port_536flr-t_adapter_764302-b21__78558.jpg",
+            "image_1_heading": "HPE Power Supply",
+            "image_1_text": "",
+            "image_1_link": "shopify:\/\/collections\/hpe-power-supply",
+            "image_2": "shopify:\/\/shop_images\/ST6000NM0004-1-removebg-preview.png",
+            "image_2_heading": "146GB Hard Drives",
+            "image_2_text": "",
+            "image_2_link": "shopify:\/\/collections\/capacity_146gb"
+          }
+        },
+        "cca54cd2-8697-4548-ad3e-047f3a8a9196": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Brands",
+            "image_1": "shopify:\/\/shop_images\/dell_j084n_146gb_15k_6g_2.5in_st9146852ss_sas_drive__89139.jpg",
+            "image_1_heading": "Dell",
+            "image_1_text": "",
+            "image_1_link": "shopify:\/\/collections\/dell",
+            "image_2": "shopify:\/\/shop_images\/IBM81Y979581Y979481Y38642TB7.2KRPM6Gbs3.5SATASERVERHDDHardDrive.jpg",
+            "image_2_heading": "IBM\/Lenovo",
+            "image_2_text": "",
+            "image_2_link": "shopify:\/\/collections\/ibm"
+          }
+        }
+      },
+      "block_order": [
+        "c61d830b-4261-4981-b51b-0b5fcf1b851b",
+        "cd6f5e11-adb4-42c1-a837-f9f4127e7d36",
+        "88db7d33-f635-47b8-bb51-eb197ba10b49",
+        "cca54cd2-8697-4548-ad3e-047f3a8a9196"
+      ],
+      "settings": {
+        "enable_sticky_header": true,
+        "logo": "shopify:\/\/shop_images\/drive22_new_2_300x_2x_5f11cf2d-5e45-4211-a4e5-d1613910bb76.jpg",
+        "logo_max_width": 300,
+        "mobile_logo_max_width": 170,
+        "show_locale_selector": false,
+        "show_country_selector": false,
+        "navigation_menu": "new-main-manu",
+        "navigation_mobile_menu": "",
+        "desktop_navigation_layout": "inline",
+        "desktop_navigation_open_trigger": "hover",
+        "show_navigation_social_media": true,
+        "navigation_phone_number": "Call us 407-960-1722",
+        "navigation_email": "sales@serverdiskdrives.com",
+        "show_condensed_search": true,
+        "show_search_filter": true,
+        "search_menu": "",
+        "show_search_menu_title": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

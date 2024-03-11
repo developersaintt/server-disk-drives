@@ -1,0 +1,37 @@
+{%- capture section_settings -%}
+  {
+    "stackable": true,
+    "layout": "vertical"
+  }
+  {%- endcapture -%}
+
+<!-- prettier-ignore -->
+<section
+  class="product--list--cantainer"
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-collection"
+  data-section-settings='{{ section_settings }}'
+>
+
+  <div class="container--flush">
+    <div class="product-list product-list--{{ section.settings.layout }} product-list--stackable ">
+      {%- assign use_placeholder = true -%}
+      
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {% when 'upsell_product' %}
+          
+            <div class="product--list-parent">
+              <div class="product--list--wrapper">
+                {% for product in product.metafields.custom.upsell_products.value %}
+                  {%- render 'product-list-item', product: product, horizontal: true, grid_classes: '', show_add_to_cart: true -%}
+                {% endfor %}
+              </div>
+            </div>
+
+          {% endcase %}
+      {% endfor %}
+    
+    </div>
+  </div>
+</section>

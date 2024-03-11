@@ -1,0 +1,29 @@
+{%- comment -%} DO NOT EDIT THIS SNIPPET - it's generated automatically {%- endcomment -%}
+{%- assign easysearchSettings = shop.metafields.easysearch.settings -%}
+<div class="easysearch-widget">
+  <div class="easysearch-container">
+    <div class="easysearch-header-holder"></div>
+    <div class="easysearch-main-holder">
+      <div class="easysearch-logo-holder"></div>
+      <div class="easysearch-holder easysearch-loading"></div>
+    </div>
+    <div class="easysearch-footer-holder"></div>
+    <div class="easysearch-ancillary-holder easysearch-hidden">
+      <style class="easysearch-necessary-styles">
+        .easysearch-hidden {
+          display: none !important;
+        }
+      </style>
+      <script type="text/javascript" class="easysearch-initialization">
+        document.addEventListener('easysearch_init', function(){ {% if easysearchSettings.value.settings %}easysearch.settings = {{ easysearchSettings.value.settings | json }};{% endif %}easysearch.buildWidgets();});
+      </script>
+      {% if easysearchSettings.value.script_src %}
+        <script
+          type="text/javascript"
+          src="{% unless request.design_mode or canonical_url contains 'shopifypreview.com' %}//{{ shop.domain }}{% endunless %}{{ easysearchSettings.value.script_src }}"
+          data-no-instant
+        ></script>
+      {% endif %}
+    </div>
+  </div>
+</div>

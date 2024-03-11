@@ -1,0 +1,117 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{section.id}}{
+    background: {{ section.settings.background_color }};
+  }
+
+  @media screen and (min-width: 640px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% assign brands = 'Cisco, Dell, Fujitsu, Hitachi, HPE, IBM/Lenovo, Intel, NVIDIA, QNAP, Samsung, Seagate, Toshiba, Western Digital, EMULEX, Kingston, Lenovo, Maxtor, NetApp, QLogic, Radeon, SanDisk'
+  | split: ', '
+%}
+{% assign types = 'Cisco Server Hard Drives, Computer Interface Cards & Adapters, Dell Compellent Hard Drives, Dell EqualLogic Hard Drives, Dell RAID Controllers, Dell Server Hard Drives, Desktop Hard Drives, Fujitsu Server Hard Drives, Hitachi Desktop Hard Drives, Hitachi Server Hard Drives, Host Bus Adapter, Host Bus Adapters, HPE Server Hard Drives, HPE Storage Hard Drives, IBM Server Hard Drives, IBM Storage Hard Drives, Laptop Hard Drives, Lenovo Server Hard Drives, Maxtor Desktop Hard Drives, NETAPP Storage Hard Drives, Network Adapters, Power Supplies, Raid Controllers, Seagate Desktop Hard Drives, Seagate Server Hard Drives, Server Fan, Server Hard Drives, Surveillance Hard Drives, Toshiba Desktop Hard Drives, Toshiba Desktop Hard Drivess, Toshiba Server Hard Drives, Video Cards, WD Desktop Hard Drives, WD Server Hard Drives'
+  | split: ', '
+%}
+{% assign all_Capacity = '20TB, 40GB, 72GB, 73GB, 80GB, 120GB, 128GB, 146GB, 160GB, 200GB, 240GB, 250GB, 300GB, 320GB, 375GB, 400GB, 450GB, 480GB, 500GB, 600GB, 640GB, 750GB, 800GB, 900GB, 960GB, 1TB, 1.2TB, 1.5TB, 1.6TB, 1.8TB, 1.92TB, 2TB, 2.4TB, 3TB, 3.2TB, 3.84TB, 4TB, 6TB, 6.4TB, 7.68TB, 8TB, 10TB, 12TB, 15.3TB, 14TB, 15.36TB'
+  | split: ', '
+-%}
+
+<section>
+  <div class="multi_search container section-{{ section.id }}-padding">
+    <div class="multi_search-heading">
+      <h2 class="h1">{{ section.settings.heading }}</h2>
+    </div>
+    <form id="MultilevelSearch">
+      <div class="multi_search-container">
+        <div class="multi_search-wrapper">
+          <label class="multi_search--title" for="Brand">Select Brand</label>
+          <select class="multi_search-item" name="ServerFamily" id="Brand">
+            <option value="" disabled selected>Select</option>
+            {% for brand in brands %}
+              <option value="{{ brand }}">{{ brand }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="multi_search-wrapper">
+          <label class="multi_search--title" for="Type">Select System/Component Type</label>
+          <select class="multi_search-item" name="ServerType" id="model">
+            <option value="" disabled selected>Select</option>
+            {% for type in types %}
+              <option value="{{ type }}">{{ type }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="multi_search-wrapper">
+          <label class="multi_search--title" for="Capacity">Select Capacity</label>
+          <select class="multi_search-item" name="ServerCapacity" id="Capacity">
+            <option value="" disabled selected>Select</option>
+            {% for Capacity in all_Capacity %}
+              <option value="{{ Capacity }}">{{ Capacity }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="button--wrapper">
+        <button type="submit" class="button button--primary">{{ section.settings.button_text }}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Multi Level Search",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi Level Search"
+    }
+  ]
+}
+{% endschema %}
