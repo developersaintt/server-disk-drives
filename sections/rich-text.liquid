@@ -15,16 +15,11 @@
       <h2 class="heading h1">{{ section.settings.title | escape }}</h2>
     {%- endif -%}
 
-    <div class="rich-text__custom-liquid">
-      {{ section.settings.custom_liquid }}
-    </div>
     <div class="rte">
       {{ section.settings.content }}
 
       {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
-        <a href="{{ section.settings.button_link }}" class="button button--primary">
-          {{- section.settings.button_text | escape -}}
-        </a>
+        <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_text | escape }}</a>
       {%- endif -%}
     </div>
   </div>
@@ -65,11 +60,6 @@
       "id": "content",
       "label": "Text",
       "default": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.</p>"
-    },
-    {
-      "type": "liquid",
-      "id": "custom_liquid",
-      "label": "Custom Liquid"
     },
     {
       "type": "text",

@@ -457,7 +457,6 @@
       "checkbox": "Quiero enviar esto como un regalo.",
       "email_label": "Correo electrónico de la persona destinataria",
       "name_label": "Nombre de la persona destinataria (opcional)",
-      "send_on_label": "Enviar el (opcional)",
       "message_label": "Mensaje (opcional)"
     }
   },

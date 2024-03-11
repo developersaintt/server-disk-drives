@@ -42,10 +42,11 @@
     "product_image_size": "square",
     "show_color_swatch": false,
     "show_inventory_quantity": true,
+    "low_inventory_threshold": 1,
     "cart_type": "drawer",
     "cart_empty_button_link": "shopify:\/\/collections\/all",
     "cart_show_checkout_button": true,
-    "cart_show_free_shipping_threshold": true,
+    "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "social_facebook": "https:\/\/www.facebook.com\/serverdiskdrives\/",
     "social_twitter": "https:\/\/twitter.com\/serverdiskdrive",
@@ -58,6 +59,8 @@
     "social_snapchat": "",
     "social_fancy": "",
     "favicon": "",
+    "pt_bg_padding": 20,
+    "pt_mobile_enable": false,
     "checkout_header_image": "",
     "checkout_logo_image": "",
     "checkout_logo_position": "left",
@@ -72,8 +75,6 @@
     "checkout_accent_color": "#00badb",
     "checkout_button_color": "#00badb",
     "checkout_error_color": "#ff0000",
-    "free_shipping_threshold": "50",
-    "low_inventory_threshold": 1,
     "search_mode": "product,article",
     "share_image": "",
     "content_for_index": [],
@@ -98,10 +99,17 @@
         "disabled": false,
         "settings": {}
       },
-      "558381514691908246": {
-        "type": "shopify:\/\/apps\/hulk-volumeboost\/blocks\/app-embed\/25745434-52e7-4378-88f1-890df18a0110",
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
-        "settings": {}
+        "settings": {
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Hello! Please message us if you have questions, or give an idea of what you’re looking for. We’re happy to make recommendations. Live Staff available Mon-Fri (9am-5pm) EST."
+        }
       },
       "6858403126979251294": {
         "type": "shopify:\/\/apps\/omega-cookie-banner\/blocks\/omega-cookies-notification\/13cba824-a338-452e-9b8e-c83046a79f21",

@@ -457,7 +457,6 @@
       "checkbox": "Voglio inviarlo come regalo",
       "email_label": "Email destinatario",
       "name_label": "Nome destinatario (facoltativo)",
-      "send_on_label": "Spedisci il giorno (opzionale)",
       "message_label": "Messaggio (facoltativo)"
     }
   },

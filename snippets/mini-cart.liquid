@@ -11,28 +11,8 @@
       {%- if cart.total_price >= threshold_in_cents -%}
         <p class="alert alert--tight alert--center text--strong">{{ 'cart.general.free_shipping' | t }}</p>
       {%- else -%}
-        {%- capture remaining_amount -%}<span data-hulkapps-cart-total >{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
+        {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
         <p class="alert alert--tight alert--center text--strong">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</p>
-        <style>
-          .free-shipping-bar__progress-wrapper {
-            background: #e6e6e6;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 10px;
-            margin-bottom: 2rem;
-          }
-          .free-shipping-bar__progress {
-            background: green;
-          }
-        </style>
-        <div class="free-shipping-bar__progress-wrapper">
-          <div data-hulkapps-cart-total 
-            class="free-shipping-bar__progress"
-            style="width: {{ cart.total_price | divided_by: threshold_in_cents | times:100 }}%"
-          >
-            &nbsp;
-          </div>
-        </div>
       {%- endif -%}
     {%- endif -%}
   {%- endcapture -%}
@@ -58,11 +38,10 @@
             {{- shipping_alert -}}
           </div>
         {%- endif -%}
-  
 
         <div class="mini-cart__line-item-list">
           {%- for line_item in cart.items -%}
-            <div  data-hulkapps-lineitem class="mini-cart__line-item">
+            <div class="mini-cart__line-item">
               {%- if line_item.image != blank -%}
                 <div class="mini-cart__image-wrapper">
                   {%- comment -%}For vertical images we force to contain them on a square ratio to avoid growing too large{%- endcomment -%}
@@ -100,8 +79,8 @@
                     <p class="mini-cart__plan-allocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
                   {%- endif -%}
 
-                  <div class='hulkapps-reminder' data-key='{{line_item.key}}'></div>                  {%- unless line_item.properties == blank -%}
-                    <ul  data-hulkapps-line-properties class="mini-cart__property-list" role="list">
+                  {%- unless line_item.properties == blank -%}
+                    <ul class="mini-cart__property-list" role="list">
                       {%- for property in line_item.properties -%}
                         {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
 
@@ -112,7 +91,6 @@
                         <li class="mini-cart__property">{{ property.first }}: {{ property.last }}</li>
                       {%- endfor -%}
                     </ul>
-<button type='button' style='display: none;' class='edit_cart_option btn btn--primary button' data-product_id='{{line_item.product_id}}' data-key='{{line_item.key}}' data-variant_id='{{line_item.variant_id}}' data-quantity='{{line_item.quantity}}'>Edit Options</button>
                   {%- endunless -%}
 
                   {%- comment -%}If we have a Shopify Script, we use the reduced price here, otherwise we check the compare at price{%- endcomment -%}
@@ -122,15 +100,15 @@
                       {%- if line_item.final_price == 0 -%}
                         <span class="price price--highlight">{{ 'cart.general.free' | t }}</span>
                       {%- else -%}
-                        <span  data-hulkapps-line-price data-key='{{line_item.key}}' class="price price--highlight">{{ line_item.final_line_price | money }}</span>
+                        <span class="price price--highlight">{{ line_item.final_line_price | money }}</span>
                       {%- endif -%}
 
-                      <span  data-hulkapps-line-price data-key='{{line_item.key}}' class="price price--compare">{{ line_item.original_line_price | money }}</span>
+                      <span class="price price--compare">{{ line_item.original_line_price | money }}</span>
                     {%- elsif line_item.variant.compare_at_price > line_item.variant.price -%}
-                      <span  data-hulkapps-line-price data-key='{{line_item.key}}' class="price price--highlight">{{ line_item.final_line_price | money }}</span>
+                      <span class="price price--highlight">{{ line_item.final_line_price | money }}</span>
                       <span class="price price--compare">{{ line_item.variant.compare_at_price | times: line_item.quantity | money }}</span>
                     {%- else -%}
-                      <span  data-hulkapps-line-price data-key='{{line_item.key}}' class="price">{{ line_item.final_line_price | money }}</span>
+                      <span class="price">{{ line_item.final_line_price | money }}</span>
                     {%- endif -%}
                   </div>
 
@@ -197,7 +175,7 @@
 
         <div class="mini-cart__recap-price-line">
           <span>{{ 'cart.general.total' | t }}</span>
-          <span data-hulkapps-cart-total >{{ cart.total_price | money_with_currency }}</span>
+          <span>{{ cart.total_price | money_with_currency }}</span>
         </div>
 
         {%- comment -%}To calculate the total discount, we take both into account the Shopify Script (for Plus merchants), but we also add the compare at price{%- endcomment -%}

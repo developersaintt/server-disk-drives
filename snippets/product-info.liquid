@@ -19,9 +19,6 @@
           {%- when 'buy_buttons' -%}
             {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
 
-          {% when 'icon-with-text' %}
-            {% render 'icon-with-text', block: block %}
-
           {%- when 'text' -%}
             {%- if block.settings.content != blank -%}
               <div class="product-meta__text rte" {{ block.shopify_attributes }}>
@@ -31,13 +28,7 @@
 
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
-              <a
-                href="{{ block.settings.link }}"
-                class="product-meta__button button button--primary"
-                {{ block.shopify_attributes }}
-              >
-                {{- block.settings.text | escape -}}
-              </a>
+              <a href="{{ block.settings.link }}" class="product-meta__button button button--primary" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</a>
             {%- endif -%}
 
           {%- when 'store_pickup' -%}
@@ -53,6 +44,9 @@
                 {{ product.description | remove: 'data-section-type="product"' }}
               </div>
             {%- endif -%}
+
+          {%- when '@app' -%}
+            {%- render block -%}
         {%- endcase -%}
       {%- endfor -%}
 
@@ -69,81 +63,33 @@
 
           <ul class="social-media__item-list list--unstyled" role="list">
             <li class="social-media__item social-media__item--facebook">
-              <a
-                href="https://www.facebook.com/sharer.php?u={{ share_url }}"
-                target="_blank"
-                rel="noopener"
-                aria-label="{{ 'general.social.facebook_share' | t }}"
-              >
-                {%- render 'icon', icon: 'facebook' -%}
-              </a>
+              <a href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">{%- render 'icon', icon: 'facebook' -%}</a>
             </li>
 
             <li class="social-media__item social-media__item--pinterest">
-              <a
-                href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}"
-                target="_blank"
-                rel="noopener"
-                aria-label="{{ 'general.social.pinterest_pin' | t }}"
-              >
-                {%- render 'icon', icon: 'pinterest' -%}
-              </a>
+              <a href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">{%- render 'icon', icon: 'pinterest' -%}</a>
             </li>
 
             <li class="social-media__item social-media__item--twitter">
-              <a
-                href="https://twitter.com/intent/tweet?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}"
-                target="_blank"
-                rel="noopener"
-                aria-label="{{ 'general.social.twitter_tweet' | t }}"
-              >
-                {%- render 'icon', icon: 'twitter' -%}
-              </a>
+              <a href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">{%- render 'icon', icon: 'twitter' -%}</a>
             </li>
 
             <li class="social-media__item">
-              <a
-                href="mailto:?&subject={{ product.title | escape }}&body={{ share_url }}"
-                aria-label="{{ 'general.social.email_share' | t }}"
-              >
-                {%- render 'icon', icon: 'email' -%}
-              </a>
+              <a href="mailto:?&subject={{ product.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">{% render 'icon', icon: 'email' %}</a>
             </li>
           </ul>
         </div>
       {%- endif -%}
     {%- endform -%}
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'contact-form' %}
-          <div class="product--block--contact">
-            <div>
-              {%- if block.settings.form_heading != blank -%}
-                <div class="form__header {% unless block.settings.show_store_info %}text-center{% endunless %}">
-                  <h2 class="heading h3">{{ block.settings.form_heading | escape }}</h2>
-
-                  {%- if block.settings.form_content != blank -%}
-                    <p>{{- block.settings.form_content | replace: '[sku]', product.sku -}}</p>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
-            </div>
-            {% render 'contact-form', block: block %}
-          </div>
-      {% endcase %}
-    {% endfor %}
-    {% if product.metafields.custom.upsell_products != blank %}
-      {% render 'product-info-upsell-list' %}
-    {% endif %}
   </div>
 
   {% comment %}
-    ------------------------------------------------------------------------------
-    Product Data. This must be outputted for all products (including home page).
+  ------------------------------------------------------------------------------
+  Product Data. This must be outputted for all products (including home page).
 
-    IMPORTANT: THIS CODE IS VITAL. DO NOT EDIT IT NOR REMOVE IT. MAKE SURE TO KEEP
-    THE EXACT SAME ATTRIBUTES.
-    ------------------------------------------------------------------------------
+  IMPORTANT: THIS CODE IS VITAL. DO NOT EDIT IT NOR REMOVE IT. MAKE SURE TO KEEP
+  THE EXACT SAME ATTRIBUTES.
+  ------------------------------------------------------------------------------
   {% endcomment %}
 
   {%- assign variant_selector_block = section.blocks | where: 'type', 'variant_selector' | first -%}
@@ -182,7 +128,7 @@
                 {%- else -%}
                   {%- capture inventory_message -%}{{ 'product.form.sold_out' | t }}{%- endcapture -%}
                 {%- endif -%}
-              {%- endif -%}
+              {%- endif -%} 
             {%- else -%}
               {%- capture inventory_message -%}{{ 'product.form.in_stock' | t }}{%- endcapture -%}
             {%- endif -%}

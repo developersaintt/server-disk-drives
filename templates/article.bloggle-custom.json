@@ -1,25 +1,11 @@
 {
   "sections": {
-    "main": {
-      "type": "main-blog-post",
-      "blocks": {
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {}
-        },
-        "social-media": {
-          "type": "social_media",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "newsletter",
-        "social-media"
-      ],
+    "blog": {
+      "type": "main-bloggle-article",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "blog"
   ]
 }

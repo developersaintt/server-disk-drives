@@ -8,9 +8,7 @@
     },
     "privacy-banner": {
       "type": "privacy-banner",
-      "settings": {
-        "text": "<p>Use this bar to show information about your cookie policy.<\/p>"
-      }
+      "settings": {}
     }
   },
   "order": [

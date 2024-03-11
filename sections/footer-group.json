@@ -55,14 +55,14 @@
           "type": "text",
           "settings": {
             "title": "About US",
-            "content": "<p>Founded in 2012 in Sanford, Florida. We offer competitive pricing, prompt shipments, hassle-free returns, and warranty support, prioritizing quality, price, and service.<\/p>"
+            "content": "<p>Our Company was established in 2012 and is located in Sanford, Florida. Our 12,000 sq. ft. warehouse facility has the equipment and experienced staff needed to meet the most rigorous IT hardware requirement. We are committed to offer products at competitive prices, prompt shipments, hassle-free returns, and warranty support. We know customers are looking for Quality, Price and Service while making their decisions on what to buy and where to buy. That is why we leverage our years of experience and expertise in procurement and supply of enterprise computing  components and computer parts.<\/p>"
           }
         },
         "02fd1ae3-e228-40b3-b6e2-da93aeddcef7": {
           "type": "text",
           "settings": {
             "title": "Contact us",
-            "content": "<p>211 Northstar Court, Sanford Florida 32771<\/p><p>TEL: <a href=\"tel:(407) 960-1722\" target=\"_blank\" title=\"tel:(407) 960-1722\">(407) 960-1722<\/a><\/p><p>Email: <a href=\"mailto:sales@serverdiskdrives.com\" target=\"_blank\" title=\"mailto:sales@serverdiskdrives.com\">sales@serverdiskdrives.com<\/a><\/p>"
+            "content": "<p>211 Northstar Court, Sanford Florida 32771<\/p><p>TEL: (407) 960-1722<\/p><p>Email: sales@serverdiskdrives.com<\/p>"
           }
         },
         "footer-1": {
@@ -77,18 +77,13 @@
             "title": "Newsletter",
             "subheading": "<p>Sign up today and receive lowest price deals and coupon codes<\/p>"
           }
-        },
-        "acae8239-3ccb-48b0-b40e-a11f48640770": {
-          "type": "trust-icons",
-          "settings": {}
         }
       },
       "block_order": [
         "footer-0",
         "02fd1ae3-e228-40b3-b6e2-da93aeddcef7",
         "footer-1",
-        "footer-2",
-        "acae8239-3ccb-48b0-b40e-a11f48640770"
+        "footer-2"
       ],
       "settings": {
         "show_social_media": true,

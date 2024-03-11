@@ -1,0 +1,191 @@
+<style type="text/css">
+    .cp24-form-app.float-layout {
+        padding: 30px;
+        -webkit-transition: -webkit-box-shadow .25s;
+        transition: -webkit-box-shadow .25s;
+        transition: box-shadow .25s;
+        transition: box-shadow .25s,-webkit-box-shadow .25s;
+        border-radius: 2px;
+        -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+        position: fixed;
+        margin-left: 30px;
+        right: 30px;
+        bottom: 30px;
+        max-height: 90vh;
+        overflow-y: auto;
+        transition: all .2s ease-in-out;
+        transform: translateY(calc(100% + 30px));
+        margin: 0;
+        z-index: 10001;
+    }            
+    .cp24-floating-button {
+        display: none;
+    }
+    .cp24-forms .cp24-floating-button.circle {
+        width: 56px;
+    }    
+    .cp24-forms .cp24-floating-button .fabLabel {
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+    .cp24-forms .cp24-floating-button .fabLabel svg {
+        fill: currentColor;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        font-size: 19px;
+        transition: fill .2s cubic-bezier(.4, 0, .2, 1) 0s;
+        flex-shrink: 0;
+        user-select: none;
+        margin-right: 8px;
+    }
+    .cp24-forms .cp24-floating-button.circle .fabLabel svg {
+        margin-right: 0;
+    }
+
+    .cp24-forms .cp24-floating-button.left {
+        top: 50%;
+        bottom: unset;
+        left: 30px;
+        right: unset;
+        transform: translate(0,-50%);
+    }
+    .cp24-forms .cp24-floating-button.right{
+        top: 50%;
+        bottom: unset;
+        left: unset;
+        right: 30px;
+        transform: translate(0,-50%);
+    }
+    .cp24-forms .cp24-floating-button.bottom-left{
+        top: unset;
+        bottom: 30px;
+        left: 30px;
+        right: unset;
+        transform: translate(0,-50%);
+    }
+    .cp24-forms .cp24-floating-button.bottom-right{
+        top: unset;
+        bottom: 30px;
+        left: unset;
+        right: 30px;
+        transform: translate(0,-50%);
+    }
+
+    .cp24_user_reg_form {
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        transition: box-shadow .25s,-webkit-box-shadow .25s;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2);
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: flow-root;
+        padding-right: 15px;
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: #fff;
+    }
+    .cp24_user_reg_form h1 {
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .cp24_form_html .form-control{
+        background:#80808026;
+        border:none;
+        border-radius:5px;
+        width: 100%;
+    }
+    .cp24_form_html .fb-text.form-group {
+        width: 50%;
+        padding: 0 15px;
+    }   
+    .cp24_form_html .fb-date {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .fb-textarea.form-group.field-message {
+        width: 100%;
+    }
+    .cp24_form_html #submit {
+        margin-top: 20px;
+        background-color: #6b056bc2;
+        color: #ffffff;
+        width: 30%;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .cp24_form_html .rendered-form .fb-text {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-textarea {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-radio-group {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-select {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-checkbox-group {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-number {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-button {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-textarea {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .cp24_form_html .rendered-form .fb-date {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .fb-file {
+        width: 50%;
+        padding: 0 15px;
+    }
+    .cp24_form_html .rendered-form .form-group {
+        margin-bottom: 15px;
+    }
+    .cp24_form_html .rendered-form label {
+        margin-bottom: 10px;
+    }
+    .cp24_form_html .rendered-form .form-control {
+        padding: 12px 18px;
+        border-radius: 3px !important;
+        box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 13%);
+    }
+    .cp24_form_html .cp24-paragraph {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+        margin-left: 5px;        
+    }
+
+    .cp24_form_html .rendered-form .fb-button button {    
+        padding: 9px 30px;
+        font-size: 17px;
+        margin-top: 20px;
+        border: 0;
+    }
+</style>
+    <script type="text/javascript">
+        var cpFormCust = {"id": '{{ customer.id }}', "email": '{{ customer.email }}', "fname": '{{ customer.first_name }}', "lname": '{{ customer.last_name }}'};
+        var cpFormSetting = {"updated_time":1684227261}    </script>
+    {{ 'cp-form-data.js' | asset_url | script_tag }}

@@ -457,7 +457,6 @@
       "checkbox": "ギフトとしてこれを送る",
       "email_label": "受信者のメール",
       "name_label": "受信者の名前 (任意）",
-      "send_on_label": "送信日 (任意)",
       "message_label": "メッセージ (任意)"
     }
   },

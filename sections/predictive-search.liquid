@@ -28,7 +28,7 @@
           <a href="{{ product.url }}" class="search-bar__result-item">
             <div class="search-bar__image-container">
               <div class="aspect-ratio aspect-ratio--square">
-                <img src="{{ product.featured_image | img_url: '120x120' }}" alt="{{ product.featured_image.alt | escape }}">
+                <img loading="lazy" src="{{ product.featured_image | img_url: '120x120' }}" alt="{{ product.featured_image.alt | escape }}">
               </div>
             </div>
 
@@ -95,21 +95,17 @@
     {%- endif -%}
   {%- elsif search.performed -%}
     {%- if search.results_count > 0 -%}
-      {%- assign product_results = search.results | where: 'object_type', 'product' -%}
-      {%- assign article_results = search.results | where: 'object_type', 'article' -%}
-      {%- assign page_results = search.results | where: 'object_type', 'page' -%}
-
-      {%- if product_results.size > 0 -%}
+      {%- if search.types contains 'product' -%}
         <p class="search-bar__result-category">{{ 'header.search.products' | t }}</p>
 
         <div class="search-bar__result-products">
           {%- assign clean_terms = search.terms | split: ' AND ' | last | remove_first: '*' -%}
 
-          {%- for item in product_results limit: 3 -%}
+          {%- for item in search.results limit: 3 -%}
             <a href="{{ item.url }}" class="search-bar__result-item">
               <div class="search-bar__image-container">
                 <div class="aspect-ratio aspect-ratio--square">
-                  <img src="{{ item.featured_image | img_url: '120x120' }}" alt="{{ item.featured_image.alt | escape }}">
+                  <img loading="lazy" src="{{ item.featured_image | img_url: '120x120' }}" alt="{{ item.featured_image.alt | escape }}">
                 </div>
               </div>
 
@@ -120,38 +116,34 @@
             </a>
           {%- endfor -%}
         </div>
-      {%- endif -%}
 
-      {%- if article_results.size > 0 or page_results.size > 0 -%}
-        {%- if article_results.size > 0 and page_results.size > 0 -%}
+        {%- if search.results_count > 3 -%}
+          <button class="search-bar__view-all" type="submit">
+            {%- if settings.search_mode == 'product' -%}
+              {{- 'header.search.view_products' | t -}}
+            {%- else -%}
+              {{- 'header.search.view_results' | t -}}
+            {%- endif -%}
+
+            {%- render 'icon', icon: 'arrow-right' -%}
+          </button>
+        {%- endif -%}
+      {%- else -%}
+        {%- if search.types contains 'article' and search.types contains 'page' -%}
           <p class="search-bar__result-category">{{ 'header.search.blog_posts_and_pages' | t }}</p>
-        {%- elsif article_results.size > 0 -%}
+        {%- elsif search.types contains 'article' -%}
           <p class="search-bar__result-category">{{ 'header.search.blog_posts' | t }}</p>
-        {%- elsif page_results.size > 0 -%}
+        {%- else -%}
           <p class="search-bar__result-category">{{ 'header.search.pages' | t }}</p>
         {%- endif -%}
 
         <ul class="search-bar__result-linklist list--unstyled" role="list">
-          {%- assign concated_results = article_results | concat: page_results -%}
-
-          {%- for item in concated_results limit: 3 -%}
+          {%- for item in search.results limit: 3 -%}
             <li>
               <a href="{{ item.url }}" class="search-bar__result-link">{{ item.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
-      {%- endif -%}
-
-      {%- if product_results.size > 3 -%}
-        <button class="search-bar__view-all" type="submit">
-          {%- if settings.search_mode == 'product' -%}
-            {{- 'header.search.view_products' | t -}}
-          {%- else -%}
-            {{- 'header.search.view_results' | t -}}
-          {%- endif -%}
-
-          {%- render 'icon', icon: 'arrow-right' -%}
-        </button>
       {%- endif -%}
     {%- else -%}
       <div class="search-bar__empty-state">

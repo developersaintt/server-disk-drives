@@ -457,7 +457,6 @@
       "checkbox": "I want to send this as a gift",
       "email_label": "Recipient email",
       "name_label": "Recipient name (optional)",
-      "send_on_label": "Send on (optional)",
       "message_label": "Message (optional)"
     }
   },

@@ -4,12 +4,7 @@
 }
 {%- endcapture -%}
 
-<!-- prettier-ignore -->
-<section
-  data-section-id="{{ section.id }}"
-  data-section-type="announcement-bar"
-  data-section-settings='{{ section_settings }}'
->
+<section data-section-id="{{ section.id }}" data-section-type="announcement-bar" data-section-settings='{{ section_settings }}'>
   {%- if section.settings.show_newsletter -%}
     <div id="announcement-bar-newsletter" class="announcement-bar__newsletter hidden-phone" aria-hidden="true">
       <div class="container">
@@ -36,8 +31,7 @@
           {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
 
           <div class="newsletter">
-            <div class="klaviyo-form-SB46UB"></div>
-            {% comment %} {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
+            {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
               {%- if form.posted_successfully? -%}
                 <p class="alert alert--success alert--center">{{ 'home_page.newsletter.success' | t }}</p>
                 {%- if form.context == 'announcement-bar' -%}
@@ -45,7 +39,7 @@
                 {%- endif -%}
               {%- else -%}
                 {%- if form.errors -%}
-                  <p class="alert alert--error">{{ form.errors.messages.email }}</p>
+                  <p class="alert alert--error">{{ form.errors.messages['email'] }}</p>
                 {%- endif -%}
 
                 <input type="hidden" name="contact[tags]" value="newsletter">
@@ -53,25 +47,14 @@
 
                 <div class="form__input-row">
                   <div class="form__input-wrapper form__input-wrapper--labelled">
-                    <input
-                      type="email"
-                      id="announcement[contact][email]"
-                      name="contact[email]"
-                      class="form__field form__field--text"
-                      autofocus
-                      required
-                    >
-                    <label for="announcement[contact][email]" class="form__floating-label">
-                      {{- 'home_page.newsletter.input' | t -}}
-                    </label>
+                    <input type="email" id="announcement[contact][email]" name="contact[email]" class="form__field form__field--text" autofocus required>
+                    <label for="announcement[contact][email]" class="form__floating-label">{{ 'home_page.newsletter.input' | t }}</label>
                   </div>
 
-                  <button type="submit" class="form__submit button button--primary">
-                    {{ 'home_page.newsletter.submit' | t }}
-                  </button>
+                  <button type="submit" class="form__submit button button--primary">{{ 'home_page.newsletter.submit' | t }}</button>
                 </div>
               {%- endif -%}
-            {%- endform -%} {% endcomment %}
+            {%- endform -%}
           </div>
         </div>
       </div>
@@ -81,27 +64,19 @@
   <div class="announcement-bar">
     <div class="container">
       <div class="announcement-bar__inner">
+        <!-- Shopper Approved Contemporary Seal - sections/announcement-bar.liquid -->
+        <a href="https://www.shopperapproved.com/reviews/serverdiskdrives.com" class="shopperlink new-sa-seals placement-1245"><img loading="lazy" src="//www.shopperapproved.com/seal/33583/1245-sa-seal.gif" style="border-radius: 4px;" alt="Customer Reviews" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by Shopper Approved \251 '+d.getFullYear()+'.'); return false;" /></a><script type="text/javascript"> (function() { var js = window.document.createElement("script"); js.innerHTML = 'function openshopperapproved(o){ var e="Microsoft Internet Explorer"!=navigator.appName?"yes":"no",n=screen.availHeight-90,r=940;return window.innerWidth<1400&&(r=620),window.open(this.href,"shopperapproved","location="+e+",scrollbars=yes,width="+r+",height="+n+",menubar=no,toolbar=no"),o.stopPropagation&&o.stopPropagation(),!1}!function(){for(var o=document.getElementsByClassName("shopperlink"),e=0,n=o.length;e<n;e++)o[e].onclick=openshopperapproved}();'; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js);var link = document.createElement('link');link.rel = 'stylesheet';link.type = 'text/css';link.href = "//www.shopperapproved.com/seal/1245.css";document.getElementsByTagName('head')[0].appendChild(link);})();</script>
+        <style>.announcement-bar__content--center { padding-left: 0; }</style>
+        <!-- END Shopper Approved Contemporary Seal - sections/announcement-bar.liquid -->
+        
         {%- if section.settings.link != blank -%}
-          <a
-            href="{{ section.settings.link }}"
-            class="announcement-bar__content announcement-bar__content--{{ section.settings.text_position }}"
-          >
-            {{- section.settings.text | escape -}}
-          </a>
+          <a href="{{ section.settings.link }}" class="announcement-bar__content announcement-bar__content--{{ section.settings.text_position }}">{{ section.settings.text | escape }}</a>
         {%- else -%}
-          <p class="announcement-bar__content announcement-bar__content--{{ section.settings.text_position }}">
-            {{ section.settings.text | escape }}
-          </p>
+          <p class="announcement-bar__content announcement-bar__content--{{ section.settings.text_position }}">{{ section.settings.text | escape }}</p>
         {%- endif -%}
 
         {%- if section.settings.show_newsletter -%}
-          <button
-            type="button"
-            class="announcement-bar__button hidden-phone"
-            data-action="toggle-newsletter"
-            aria-expanded="false"
-            aria-controls="announcement-bar-newsletter"
-          >
+          <button type="button" class="announcement-bar__button hidden-phone" data-action="toggle-newsletter" aria-expanded="false" aria-controls="announcement-bar-newsletter">
             {%- render 'icon', icon: 'newsletter' -%}
             {{- section.settings.newsletter_button | escape -}}
           </button>
@@ -131,7 +106,6 @@
 {% schema %}
 {
   "name": "Announcement bar",
-  "class": "shopify-section--announcement-bar",
   "settings": [
     {
       "type": "color",

@@ -1,18 +1,4 @@
-{% style %}
-  .section-{{ section.id }}-background {
-    background-color: {{ section.settings.background_color }};
-    padding-top: {{ section.settings.padding_top_1 | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom_2 | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-background {
-      padding-top: {{ section.settings.padding_top_1 }}px;
-      padding-bottom: {{ section.settings.padding_bottom_2 }}px;
-    }
-  {% endstyle %}
-
-<section class="section section-{{ section.id }}-background" data-section-id="{{ section.id }}" data-section-type="image-with-text">
+<section class="section" data-section-id="{{ section.id }}" data-section-type="image-with-text">
   <div class="container">
     {%- capture image -%}
       <div class="image-with-text__image-container" style="width: {{ section.settings.image_width }}%;">
@@ -113,31 +99,6 @@
       "id": "button_link",
       "label": "Button link",
       "default": "/collections/all"
-    },
-    {
-      "type":"color",
-      "id":"background_color",
-      "label":"Background"
-    },
-    {
-      "type": "range",
-      "id": "padding_top_1",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Top",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom_2",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "padding Bottom",
-      "default": 0
     }
   ],
   "presets": [

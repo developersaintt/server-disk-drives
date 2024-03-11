@@ -1,151 +1,40 @@
 {
   "sections": {
-    "7c89813c-15da-4493-9ae3-0a88a8a97d9b": {
-      "type": "contact-form",
-      "settings": {
-        "form_heading": "Get in touch with us",
-        "form_content": "",
-        "show_store_info": false,
-        "store_heading": "Find us",
-        "store_info": ""
-      }
-    },
     "main": {
       "type": "main-page",
       "settings": {}
     },
-    "f1d3d33f-37de-4432-aeb2-b21c19340aae": {
-      "type": "rich-text",
-      "settings": {
-        "text_width": "narrow",
-        "title": "Get in touch with us",
-        "content": "<p>211 Northstar Court, Sanford Florida 32771<\/p><p>TEL: <a href=\"tel:(407) 960-1722\" target=\"_blank\" title=\"tel:(407) 960-1722\">(407) 960-1722<\/a><\/p><p>Email: <a href=\"mailto:sales@serverdiskdrives.com\" target=\"_blank\" title=\"mailto:sales@serverdiskdrives.com\">sales@serverdiskdrives.com<\/a><\/p>",
-        "button_text": "",
-        "button_link": "shopify:\/\/collections\/all"
-      }
-    },
-    "c7944428-15b6-4146-a937-3b39acdeb307": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/image-from-rawpixe.jpg",
-        "image_position": "left",
-        "image_width": 50,
-        "title": "Request Return",
-        "content": "<p>Return request can be made<a href=\"https:\/\/serverdiskdrives-com.myshopify.com\/apps\/return_prime\" target=\"_blank\">online here<\/a>or customers can log in to their account and initiate a return. Please note: Items are returnable (for refund) within 30 days from the date of purchase.<\/p>",
-        "button_text": "",
-        "button_link": "shopify:\/\/collections\/all"
-      }
-    },
-    "bf17831b-0336-4e77-9d49-3c5fe1e8a6f3": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/high_bay_stock_range_warenlager_shelf_shipping_packaging_logistics-948616.png",
-        "image_position": "right",
-        "image_width": 50,
-        "title": "Warranty Claim:",
-        "content": "<p>All items carry 1-Year replacement warranty from the date of purchase. In order to claim warranty, please email us at sales@serverdiskdrives.com with the following information: 1) order number 2) serial number(s) of the item(s) you wish to return 3) reason for return and our staff will promptly respond back<\/p>",
-        "button_text": "",
-        "button_link": "shopify:\/\/collections\/all"
-      }
-    },
-    "dbffc265-6f6a-4e0c-aae0-0b69663a942e": {
-      "type": "faq",
-      "blocks": {
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-separator-1": {
-          "type": "separator",
-          "settings": {
-            "title": "FAQ"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-1": {
-          "type": "question",
-          "settings": {
-            "title": "How long does it take for me to receive my order?",
-            "answer": "<p>Orders placed on regular business day before 4.00PM EST are shipped out same day. Estimated delivery within USA is between 1-3 business days<\/p>"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-2": {
-          "type": "question",
-          "settings": {
-            "title": "What is your return and exchange policy?",
-            "answer": "<p>We offer 30 days refund or exchange policy and standard 1 year replacement warranty on all items.<\/p>"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-3": {
-          "type": "question",
-          "settings": {
-            "title": "How do I change my shipping address?",
-            "answer": "<p>Shipping address can be changed before the order is marked as shipped by contacting us with the order number<\/p>"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-4": {
-          "type": "question",
-          "settings": {
-            "title": "How do I track the status of my order?",
-            "answer": "<p>Tracking number and shipping company name is provided once order is shipped and tracking numbers can be tracked online via fedex or usps website. If you created an account before placing an order (in other words, you did not place the order as a guest), then you will have a copy of order in your account section with tracking number on it – as soon as the order has been fulfilled.<\/p>"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-5": {
-          "type": "question",
-          "settings": {
-            "title": "How do I receive customer support?",
-            "answer": "<p>Various ways to contact us for support. You can email us, call us or connect with us via chat on the website. <\/p>"
-          }
-        },
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-6": {
-          "type": "question",
-          "settings": {
-            "title": "What do I do if I entered an incorrect shipping address?",
-            "answer": "<p>Contact us with correct address however please note that shipping address can not be changed once order has been marked shipped. <\/p>"
-          }
-        },
-        "6cba247b-a38c-44db-951f-119943ac8362": {
-          "type": "question",
-          "settings": {
-            "title": "Do you ship to my country?",
-            "answer": "<p>We ship to most International destinations as required by laws in the United States. Please contact us for a quote.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-separator-1",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-1",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-2",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-3",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-4",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-5",
-        "template--17047644078324__dbffc265-6f6a-4e0c-aae0-0b69663a942e-question-6",
-        "6cba247b-a38c-44db-951f-119943ac8362"
-      ],
-      "settings": {
-        "show_contact_info": true,
-        "contact_info_heading": "Still need help?",
-        "contact_info_text": "",
-        "contact_1_icon": "bi-shield",
-        "contact_1_heading": "",
-        "contact_1_text": "",
-        "contact_2_icon": "bi-email",
-        "contact_2_heading": "",
-        "contact_2_text": ""
-      }
-    },
     "newsletter": {
       "type": "newsletter",
+      "disabled": true,
       "settings": {
         "title": "Newsletter",
         "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
         "background": "#1e2d7d",
         "text": "#ffffff"
       }
+    },
+    "168483268730521a83": {
+      "type": "apps",
+      "blocks": {
+        "3553088e-c581-40f8-808a-a2c9016e6e4a": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "RNrypK"
+          }
+        }
+      },
+      "block_order": [
+        "3553088e-c581-40f8-808a-a2c9016e6e4a"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "7c89813c-15da-4493-9ae3-0a88a8a97d9b",
     "main",
-    "f1d3d33f-37de-4432-aeb2-b21c19340aae",
-    "c7944428-15b6-4146-a937-3b39acdeb307",
-    "bf17831b-0336-4e77-9d49-3c5fe1e8a6f3",
-    "dbffc265-6f6a-4e0c-aae0-0b69663a942e",
-    "newsletter"
+    "newsletter",
+    "168483268730521a83"
   ]
 }

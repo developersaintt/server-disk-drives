@@ -30,64 +30,10 @@
             "show_gift_card_recipient": false
           }
         },
-        "1d58b13d-5d50-4a21-88e6-cd5a1273222b": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "content": "<p><strong>Quantity Breaks:<br\/>Qty 6+ :<\/strong> $104.64<br\/><strong>Qty 12+ :<\/strong> $102.46<\/p>"
-          }
-        },
-        "52c57142-1c46-4e1c-9ed0-590abc815fe0": {
-          "type": "icon-with-text",
-          "settings": {
-            "block_icon": "shopify:\/\/shop_images\/065af00c-56af-41d5-8743-3a3e1b4bc7ec.svg",
-            "icon_heading": "Free Shipping",
-            "icon_text": "Delivered Free 2-3 days",
-            "block_icon_2": "shopify:\/\/shop_images\/99e95c15-a693-47c4-8ce1-02e7ee39983a.svg",
-            "icon_heading_2": "Warranty",
-            "icon_text_2": "1-Year Hassle-Free Warranty",
-            "block_icon_3": "shopify:\/\/shop_images\/e50424f4-89f7-41e3-899d-2825866c0c04.svg",
-            "icon_heading_3": "Support",
-            "icon_text_3": "Pre & Post Sales Support",
-            "icon_heading_4": "",
-            "icon_text_4": "",
-            "icon_heading_5": "",
-            "icon_text_5": "",
-            "icon_heading_6": "",
-            "icon_text_6": ""
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
             "display_mode": "show_all"
-          }
-        },
-        "4174145c-652d-4fd1-96ae-579e30566855": {
-          "type": "upsell_product",
-          "settings": {}
-        },
-        "3c29c73b-e565-430a-a362-e5f59cd67cbb": {
-          "type": "contact-form",
-          "settings": {
-            "form_heading": "Bulk Inquiry",
-            "form_content": "Please call at <strong contenteditable=\"true\">(407) 960-1722<\/strong> and one of our representative will be happy to assist you with this product. Or Request a Quote below",
-            "title_2": "How soon you need it?",
-            "option_1": "Today",
-            "option_2": "This week",
-            "option_3": "30 Days+"
-          }
-        },
-        "79b4b962-d62e-4c92-9acd-64210f3dd505": {
-          "type": "shopify:\/\/apps\/smps-product-question-answer\/blocks\/SQA\/84c5ea51-4ec6-4681-8c2f-c95d8846ed7e",
-          "settings": {}
-        },
-        "b6c1c52e-c29b-41de-b56e-a46238362c05": {
-          "type": "trust",
-          "settings": {
-            "trust_title": "Payment & Security",
-            "show_payment_icons": true,
-            "custom_security_badge_width": 200
           }
         }
       },
@@ -95,68 +41,14 @@
         "product_meta",
         "variant_selector",
         "buy_buttons",
-        "1d58b13d-5d50-4a21-88e6-cd5a1273222b",
-        "52c57142-1c46-4e1c-9ed0-590abc815fe0",
-        "description",
-        "4174145c-652d-4fd1-96ae-579e30566855",
-        "3c29c73b-e565-430a-a362-e5f59cd67cbb",
-        "79b4b962-d62e-4c92-9acd-64210f3dd505",
-        "b6c1c52e-c29b-41de-b56e-a46238362c05"
+        "description"
       ],
       "settings": {
         "image_size": "small",
-        "enable_video_looping": true,
+        "enable_video_looping": false,
         "enable_image_zoom": true,
         "zoom_effect": "outside",
         "carousel_effect": "fade"
-      }
-    },
-    "ab288266-1abc-4aac-a341-acd62e22de3a": {
-      "type": "text-with-icons",
-      "blocks": {
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-1": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-delivery",
-            "custom_icon": "shopify:\/\/shop_images\/shipped.png",
-            "title": "Free delivery worldwide",
-            "content": "<p>Order by 3.30pm EST. (mon-fri) and get it delivered free in 2 business days.<\/p>"
-          }
-        },
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-returns",
-            "title": "Satisfied or refunded",
-            "content": "<p>We offer 30 days refunds or exchange policy and standard 1 year replacement warranty on all items.<\/p>"
-          }
-        },
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "Top-notch support",
-            "content": "<p>We have a designated support team to help with any issues you may encounter.<\/p>"
-          }
-        },
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-secure-payment",
-            "title": "Secure payments",
-            "content": "<p>Payments through our site are completely secure.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-1",
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-2",
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-3",
-        "template--17031626588404__ab288266-1abc-4aac-a341-acd62e22de3a-item-4"
-      ],
-      "disabled": true,
-      "settings": {
-        "stack_mobile": false
       }
     },
     "1684128469145507b4": {
@@ -170,217 +62,8 @@
       "block_order": [
         "62c2277f-06dc-4a35-b056-292a2621bc4d"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
-      }
-    },
-    "3d66d386-0b61-4f22-a10c-ef7989481cc0": {
-      "type": "faq",
-      "blocks": {
-        "602d6571-ebaa-43ea-b03c-c9937d602870": {
-          "type": "separator",
-          "settings": {
-            "title": "Frequently asked Questions"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-1": {
-          "type": "separator",
-          "settings": {
-            "title": "Shipping Info"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-1": {
-          "type": "question",
-          "settings": {
-            "title": "How do I change my shipping address?",
-            "answer": "<p>Shipping address can be changed before the order is marked as shipped by contacting us with the order number<\/p>"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-2": {
-          "type": "question",
-          "settings": {
-            "title": "What do I do if I entered an incorrect shipping address?",
-            "answer": "<p>Contact us with correct address however please note that shipping address can not be changed once order has been marked shipped. <\/p>"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-3": {
-          "type": "question",
-          "settings": {
-            "title": "Do you ship to my country?",
-            "answer": "<p>We ship to most International destinations as required by laws in the United States. Please contact us for a quote.<\/p>"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-2": {
-          "type": "separator",
-          "settings": {
-            "title": "Order Info"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-4": {
-          "type": "question",
-          "settings": {
-            "title": "How long does it take for me to receive my order?",
-            "answer": "<p>Orders placed on regular business day before 4.00PM EST are shipped out same day. Estimated delivery within USA is between 1-3 business days<\/p>"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-5": {
-          "type": "question",
-          "settings": {
-            "title": "How do I track the status of my order?",
-            "answer": "<p>Tracking number and shipping company name is provided once order is shipped and tracking numbers can be tracked online via fedex or usps website. If you created an account before placing an order (in other words, you did not place the order as a guest), then you will have a copy of order in your account section with tracking number on it – as soon as the order has been fulfilled.<\/p>"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-3": {
-          "type": "separator",
-          "settings": {
-            "title": "Return and Exchange Info"
-          }
-        },
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-6": {
-          "type": "question",
-          "settings": {
-            "title": "What is your return and exchange policy?",
-            "answer": "<p>We offer 30 days refund or exchange policy and standard 1 year replacement warranty on all items.<\/p>"
-          }
-        },
-        "e7fade0f-4772-4ce4-8c35-837f873e2496": {
-          "type": "separator",
-          "settings": {
-            "title": "Customer Support Info"
-          }
-        },
-        "717a2c32-4236-455d-abe4-fa4681937008": {
-          "type": "question",
-          "settings": {
-            "title": "How do I receive customer support?",
-            "answer": "<p>Various ways to contact us for support. You can email us, call us or connect with us via chat on the website. <\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "602d6571-ebaa-43ea-b03c-c9937d602870",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-1",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-1",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-2",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-3",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-2",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-4",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-5",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-separator-3",
-        "template--17031626588404__3d66d386-0b61-4f22-a10c-ef7989481cc0-question-6",
-        "e7fade0f-4772-4ce4-8c35-837f873e2496",
-        "717a2c32-4236-455d-abe4-fa4681937008"
-      ],
-      "settings": {
-        "show_contact_info": false,
-        "contact_info_heading": "Any question?",
-        "contact_info_text": "<p>If we still haven't answered your question, you can contact us below and we will get back to you as soon as possible.<\/p>",
-        "contact_1_icon": "bi-phone",
-        "contact_1_heading": "Customer support",
-        "contact_1_text": "<p>Enter your text here<\/p>",
-        "contact_2_icon": "bi-email",
-        "contact_2_heading": "Send a message",
-        "contact_2_text": "<p>Enter your text here<\/p>"
-      }
-    },
-    "48493f16-6b7c-40fe-bd95-ffea3aced9df": {
-      "type": "text-with-icon-new",
-      "blocks": {
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-1": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-delivery",
-            "title": "DELL",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/dell"
-          }
-        },
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-returns",
-            "title": "LENOVO",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/lenovo"
-          }
-        },
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "KINGSTON",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/kingston"
-          }
-        },
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-secure-payment",
-            "title": "TOSHIBA",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/toshiba"
-          }
-        },
-        "81db88dd-6289-4de8-812e-9295dc97fa2e": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "SANDISK",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/sandisk"
-          }
-        },
-        "8ca3d732-3ac1-41ec-b82f-10a1178dd05d": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "INTEL",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/intel"
-          }
-        },
-        "6363ebe5-d7cc-4337-a5a0-9b35abc02f7c": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "HP",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/hpe"
-          }
-        },
-        "57a34e3d-2af6-4475-b3fc-50920a9f246b": {
-          "type": "item",
-          "settings": {
-            "icon": "bi-customer-support",
-            "title": "HITACHI",
-            "content": "",
-            "item_container_link": "shopify:\/\/collections\/hitachi"
-          }
-        }
-      },
-      "block_order": [
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-1",
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-2",
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-3",
-        "template--17031626588404__48493f16-6b7c-40fe-bd95-ffea3aced9df-item-4",
-        "81db88dd-6289-4de8-812e-9295dc97fa2e",
-        "8ca3d732-3ac1-41ec-b82f-10a1178dd05d",
-        "6363ebe5-d7cc-4337-a5a0-9b35abc02f7c",
-        "57a34e3d-2af6-4475-b3fc-50920a9f246b"
-      ],
-      "settings": {
-        "stack_mobile": true,
-        "section_heading": "Shop By Brand"
-      }
-    },
-    "40511ea2-17f2-4bfb-a995-463896bf4bb7": {
-      "type": "custom-liquid",
-      "settings": {
-        "title": "Reviews",
-        "include_margins": true,
-        "liquid": "<!-- Shopper Approved Product Page Code - Customize\/Product\/Default product -->\n<div id=\"SA_review_wrapper\"><\/div><script type=\"text\/javascript\">var sa_product = '{{product.id}}'; var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text\/javascript'; document.getElementsByTagName(\"head\")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('\/\/www.shopperapproved.com\/widgets\/33583\/product\/'+sa_product+'\/product-widget\/410GC8fTM952.js'); <\/script>\n<style>\n#SA_review_wrapper .SA__pagination ul li {\n    line-height: 15px;\n  }\n<\/style>\n<!-- END Shopper Approved Product Page Code - Customize\/Product\/Default product -->"
       }
     },
     "product-recommendations": {
@@ -396,16 +79,21 @@
         "title": "Recently viewed",
         "show_quick_buy": false
       }
+    },
+    "40511ea2-17f2-4bfb-a995-463896bf4bb7": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "Reviews",
+        "include_margins": true,
+        "liquid": "<!-- Shopper Approved Product Page Code - Customize\/Product\/Default product -->\n<div id=\"SA_review_wrapper\"><\/div><script type=\"text\/javascript\">var sa_product = '{{product.id}}'; var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text\/javascript'; document.getElementsByTagName(\"head\")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('\/\/www.shopperapproved.com\/widgets\/33583\/product\/'+sa_product+'\/product-widget\/410GC8fTM952.js'); <\/script>\n<style>\n#SA_review_wrapper .SA__pagination ul li {\n    line-height: 15px;\n  }\n<\/style>\n<!-- END Shopper Approved Product Page Code - Customize\/Product\/Default product -->"
+      }
     }
   },
   "order": [
     "main",
-    "ab288266-1abc-4aac-a341-acd62e22de3a",
     "1684128469145507b4",
-    "3d66d386-0b61-4f22-a10c-ef7989481cc0",
-    "48493f16-6b7c-40fe-bd95-ffea3aced9df",
-    "40511ea2-17f2-4bfb-a995-463896bf4bb7",
     "product-recommendations",
-    "recently-viewed-products"
+    "recently-viewed-products",
+    "40511ea2-17f2-4bfb-a995-463896bf4bb7"
   ]
 }

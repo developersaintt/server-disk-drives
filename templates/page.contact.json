@@ -6,13 +6,7 @@
     },
     "contact-form": {
       "type": "contact-form",
-      "settings": {
-        "form_heading": "",
-        "form_content": "",
-        "show_store_info": false,
-        "store_heading": "Find us",
-        "store_info": ""
-      }
+      "settings": {}
     }
   },
   "order": [

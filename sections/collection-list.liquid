@@ -1,8 +1,8 @@
-<section class="collection--parent section" data-section-id="{{ section.id }}" data-section-type="collection-list">
+<section class="section" data-section-id="{{ section.id }}" data-section-type="collection-list">
   <div class="container">
     {%- if section.settings.title != blank -%}
       <header class="section__header">
-        <h2 class="section__title heading bold h2">{{ section.settings.title | escape }}</h2>
+        <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
 
         {%- if section.settings.link_title != blank and section.settings.link != blank -%}
           <a href="{{ section.settings.link }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% render 'icon', icon: 'tail-right' %}</a>

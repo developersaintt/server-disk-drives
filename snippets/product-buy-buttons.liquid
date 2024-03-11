@@ -1,11 +1,5 @@
-{%- assign recipient_feature_active = false -%}
-
-{%- if product.gift_card? and block.settings.show_gift_card_recipient -%}
-  {%- assign recipient_feature_active = true -%}
-{%- endif -%}
-
 <div class="product-form__buy-buttons" {{ block.shopify_attributes }}>
-  {%- if recipient_feature_active -%}
+  {%- if product.gift_card? and block.settings.show_gift_card_recipient -%}
     <gift-card-recipient class="gift-card-recipient">
       <div class="form__input-wrapper form__input-wrapper--labelled">
         <div class="checkbox-wrapper">
@@ -28,13 +22,7 @@
         </div>
 
         <div class="form__input-wrapper form__input-wrapper--labelled">
-          <input type="hidden" name="properties[__shopify_offset]" value="" disabled>
-          <input id="product-{{ section.id }}-{{ product.id }}-send-on" type="date" class="form__field form__field--date is-filled" pattern="\d{4}-\d{2}-\d{2}" name="properties[Send on]" value="{{ form.send_on }}">
-          <label for="product-{{ section.id }}-{{ product.id }}-send-on" class="form__floating-label">{{ 'gift_card.recipient.send_on_label' | t }}</label>
-        </div>
-
-        <div class="form__input-wrapper form__input-wrapper--labelled">
-          <textarea id="product-{{ section.id }}-{{ product.id }}-recipient-message" rows="4" class="form__field form__field--textarea" name="properties[Message]">{{ form.message }}</textarea>
+          <textarea id="product-{{ section.id }}-{{ product.id }}-recipient-message" rows="4" class="form__field form__field--textarea" name="properties[Recipient message]">{{ form.message }}</textarea>
           <label for="product-{{ section.id }}-{{ product.id }}-recipient-message" class="form__floating-label">{{ 'gift_card.recipient.message_label' | t }}</label>
         </div>
       </div>
@@ -53,7 +41,7 @@
         <button type="submit" class="product-form__add-button button button--disabled" disabled>{{ 'product.form.sold_out' | t }}</button>
       {%- endif -%}
 
-      {%- if block.settings.show_payment_button and recipient_feature_active == false and product.template_suffix != 'pre-order' -%}
+      {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
         {{ form | payment_button }}
       {%- endif -%}
     {%- else -%}

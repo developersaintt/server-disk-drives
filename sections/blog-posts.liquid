@@ -1,10 +1,10 @@
 {%- assign blog = section.settings.blog -%}
 
-<section class="section blog-post-parent" data-section-id="{{ section.id }}" data-section-type="blog-posts">
+<section class="section" data-section-id="{{ section.id }}" data-section-type="blog-posts">
   <div class="container">
     {%- if section.settings.title != blank -%}
       <header class="section__header">
-        <h2 class="section__title heading bold h2">{{ section.settings.title | escape }}</h2>
+        <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
 
         {%- unless section.settings.link_title == blank -%}
           <a href="{{ blog.url }}" class="section__action-link link">{{ section.settings.link_title }} {% render 'icon', icon: 'tail-right' %}</a>

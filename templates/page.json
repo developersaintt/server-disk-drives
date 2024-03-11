@@ -4,6 +4,16 @@
       "type": "main-page",
       "settings": {}
     },
+    "newsletter": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "title": "Newsletter",
+        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+        "background": "#1e2d7d",
+        "text": "#ffffff"
+      }
+    },
     "168483268730521a83": {
       "type": "apps",
       "blocks": {
@@ -17,7 +27,6 @@
       "block_order": [
         "3553088e-c581-40f8-808a-a2c9016e6e4a"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -25,6 +34,7 @@
   },
   "order": [
     "main",
+    "newsletter",
     "168483268730521a83"
   ]
 }

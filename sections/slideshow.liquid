@@ -10,21 +10,9 @@
 }
 {%- endcapture -%}
 
-<!-- prettier-ignore -->
-<section
-  data-section-id="{{ section.id }}"
-  data-section-type="slideshow"
-  data-section-settings='{{ section_settings }}'
->
-  <div
-    {% unless section.settings.edge_to_edge %}
-      class="container container--flush"
-    {% endunless %}
-  >
-    <div
-      class="slideshow slideshow--{{ section.settings.section_size | replace: '_', '-' }} {% if section.settings.edge_to_edge %}slideshow--edge2edge{% endif %}"
-      style="color: {{ section.blocks.first.settings.text_color }}"
-    >
+<section data-section-id="{{ section.id }}" data-section-type="slideshow" data-section-settings='{{ section_settings }}'>
+  <div {% unless section.settings.edge_to_edge %}class="container container--flush"{% endunless %}>
+    <div class="slideshow slideshow--{{ section.settings.section_size | replace: '_', '-' }} {% if section.settings.edge_to_edge %}slideshow--edge2edge{% endif %}" style="color: {{ section.blocks.first.settings.text_color }}">
       {%- for block in section.blocks -%}
         {%- capture slide_inner -%}
           <div class="slideshow__slide-inner slideshow__slide-inner--{{ block.settings.content_position | replace: '_', '-' }}">
@@ -80,7 +68,6 @@
           <style>
             #block-{{ block.id }} {
               color: {{ block.settings.text_color }};
-              background: {{ block.settings.background_color }};
             }
 
             #block-{{ block.id }} .button {
@@ -102,22 +89,11 @@
         {%- endcapture -%}
 
         {%- if block.settings.link != blank and block.settings.button_text == blank -%}
-          <a
-            href="{{ block.settings.link }}"
-            class="slideshow__slide {% if block.settings.show_overlay %}slideshow__slide--overlay{% endif %} {% if forloop.first %}is-selected{% endif %}"
-            id="block-{{ block.id }}"
-            data-block-index="{{ forloop.index0 }}"
-            {{ block.shopify_attributes }}
-          >
+          <a href="{{ block.settings.link }}" class="slideshow__slide {% if block.settings.show_overlay %}slideshow__slide--overlay{% endif %} {% if forloop.first %}is-selected{% endif %}" id="block-{{ block.id }}" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
             {{- slide_inner -}}
           </a>
         {%- else -%}
-          <div
-            class="slideshow__slide {% if block.settings.show_overlay %}slideshow__slide--overlay{% endif %} {% if forloop.first %}is-selected{% endif %}"
-            id="block-{{ block.id }}"
-            data-block-index="{{ forloop.index0 }}"
-            {{ block.shopify_attributes }}
-          >
+          <div class="slideshow__slide {% if block.settings.show_overlay %}slideshow__slide--overlay{% endif %} {% if forloop.first %}is-selected{% endif %}" id="block-{{ block.id }}" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
             {{- slide_inner -}}
           </div>
         {%- endif -%}
@@ -129,7 +105,6 @@
 {% schema %}
 {
   "name": "Slideshow",
-  "class": "slideshow-new",
   "max_blocks": 6,
   "settings": [
     {
@@ -200,11 +175,6 @@
       "type": "image",
       "name": "Slide",
       "settings": [
-        {
-          "type": "color",
-          "id": "background_color",
-          "label": "Background Color"
-        },
         {
           "type": "image_picker",
           "id": "image",

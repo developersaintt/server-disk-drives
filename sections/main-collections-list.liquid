@@ -69,9 +69,7 @@
                   <div class="grid__cell 1/2--tablet 1/3--lap-and-up">
                     <a href="{{ collection.url }}" class="collection-block-item {% if section.settings.show_collection_overlay %}collection-block-item--overlay{% endif %}">
                       <div class="aspect-ratio" style="padding-bottom: 45%">
-                        {%- if collection.featured_image != blank -%}
-                          {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy', sizes: 'min(100vw, 850px)', widths: '200,300,400,500,600,800,1000,1200,1400', class: 'collection-block-item__image image-background' -}}
-                        {%- endif -%}
+                        {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy', sizes: 'min(100vw, 850px)', widths: '200,300,400,500,600,800,1000,1200,1400', class: 'collection-block-item__image image-background' -}}
                       </div>
 
                       {%- if section.settings.show_collection_title -%}

@@ -457,7 +457,6 @@
       "checkbox": "Bunu hediye olarak göndermek istiyorum",
       "email_label": "Alıcı e-postası",
       "name_label": "Alıcı adı (isteğe bağlı)",
-      "send_on_label": "Gönder (isteğe bağlı)",
       "message_label": "Mesaj (isteğe bağlı)"
     }
   },

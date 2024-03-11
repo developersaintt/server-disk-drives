@@ -5,7 +5,7 @@
   <div class="product-form__variants" {{ block.shopify_attributes }}>
     {%- for option in product.options_with_values -%}
       {%- assign downcase_option = option.name | downcase -%}
-      {%- capture option_name -%}{{ section.id }}-{{ product.id }}-{{ option.position }}{%- endcapture -%}
+      {%- capture option_name -%}{{ section.id }}-{{ product.id }}-{{ forloop.index }}{%- endcapture -%}
 
       {%- assign option_selector_type = 'select' -%}
 
@@ -62,12 +62,13 @@
             <span class="product-form__option-name text--strong">{{ option.name }}: <span class="product-form__selected-value">{{ option.selected_value }}</span></span>
 
             <div class="variant-swatch-list">
+              {%- capture option_name -%}option{{ option.position }}{%- endcapture -%}
+
               {%- for value in option.values -%}
                 {%- capture variant_swatch_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
-                {%- capture option_index -%}option{{ option.position }}{%- endcapture -%}
 
                 {%- for variant in product.variants -%}
-                  {%- if variant[option_index] == value and variant.image -%}
+                  {%- if variant[option_name] == value and variant.image -%}
                     <div class="variant-swatch">
                       <input class="variant-swatch__radio product-form__single-selector" type="radio" name="{{ option_name }}" id="{{ variant_swatch_id }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-position="{{ option.position }}">
 

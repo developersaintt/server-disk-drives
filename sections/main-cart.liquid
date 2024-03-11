@@ -1,6 +1,6 @@
 {%- capture section_settings -%}
 {
-  "showShippingEstimator": {% if cart.item_count == 0 or cart.requires_shipping == false %}false{% else %}{{ section.settings.show_shipping_estimator | json }}{% endif %}
+  "showShippingEstimator": {% if cart.item_count == 0 %}false{% else %}{{ section.settings.show_shipping_estimator | json }}{% endif %}
 }
 {%- endcapture -%}
 
@@ -16,7 +16,7 @@
 
         {%- if settings.cart_show_free_shipping_threshold -%}
           {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
-          {%- capture remaining_amount -%}<span data-hulkapps-cart-total >{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
+          {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
           <p class="empty-state__description">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</p>
         {%- endif -%}
 
@@ -36,7 +36,7 @@
           {%- if cart.total_price >= threshold_in_cents -%}
             <p class="page__description">{{ 'cart.general.free_shipping' | t }}</p>
           {%- else -%}
-            {%- capture remaining_amount -%}<span data-hulkapps-cart-total >{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
+            {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money }}</span>{%- endcapture -%}
             <p class="page__description">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</p>
           {%- endif -%}
         {%- endif -%}
@@ -68,7 +68,7 @@
                     {%- assign gift_wrap_product = section.settings.gift_wrap_product -%}
 
                     {%- for line_item in cart.items -%}
-                      <tr  data-hulkapps-lineitem class="line-item line-item--stack">
+                      <tr class="line-item line-item--stack">
                         <td class="line-item__product-info">
                           <div class="line-item__product-info-wrapper">
                             <div class="line-item__image-wrapper">
@@ -107,8 +107,8 @@
                                 <p class="line-item__plan-allocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
                               {%- endif -%}
 
-                              <div class='hulkapps-reminder' data-key='{{line_item.key}}'></div>                              {%- unless line_item.properties == blank -%}
-                                <ul  data-hulkapps-line-properties class="line-item__property-list" role="list">
+                              {%- unless line_item.properties == blank -%}
+                                <ul class="line-item__property-list" role="list">
                                   {%- for property in line_item.properties -%}
                                     {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
 
@@ -119,7 +119,6 @@
                                     <li class="line-item__property">{{ property.first }}: {{ property.last }}</li>
                                   {%- endfor -%}
                                 </ul>
-<button type='button' style='display: none;' class='edit_cart_option btn btn--primary button' data-product_id='{{line_item.product_id}}' data-key='{{line_item.key}}' data-variant_id='{{line_item.variant_id}}' data-quantity='{{line_item.quantity}}'>Edit Options</button>
                               {%- endunless -%}
 
                               <div class="line-item__price-list">
@@ -127,15 +126,15 @@
                                   {%- if line_item.final_price == 0 -%}
                                     <span class="line-item__price line-item__price--highlight">{{ 'cart.general.free' | t }}</span>
                                   {%- else -%}
-                                    <span  data-hulkapps-ci-price data-key='{{line_item.key}}' class="line-item__price line-item__price--highlight">{{ line_item.final_price | money }}</span>
+                                    <span class="line-item__price line-item__price--highlight"><span class="bcpo-cart-item-price" data-key="{{line_item.key}}">{{ line_item.final_price | money }}</span></span>
                                   {%- endif -%}
 
-                                  <span  data-hulkapps-ci-price data-key='{{line_item.key}}' class="line-item__price line-item__price--compare">{{ line_item.original_price | money }}</span>
+                                  <span class="line-item__price line-item__price--compare"><span class="bcpo-cart-item-original-price" data-key="{{line_item.key}}">{{ line_item.original_price | money }}</span></span>
                                 {%- elsif line_item.variant.compare_at_price > line_item.variant.price -%}
                                   {%- if line_item.final_price == 0 -%}
                                     <span class="line-item__price line-item__price--highlight">{{ 'cart.general.free' | t }}</span>
                                   {%- else -%}
-                                    <span  data-hulkapps-ci-price data-key='{{line_item.key}}' class="line-item__price line-item__price--highlight">{{ line_item.final_price | money }}</span>
+                                    <span class="line-item__price line-item__price--highlight"><span class="bcpo-cart-item-price" data-key="{{line_item.key}}">{{ line_item.final_price | money }}</span></span>
                                   {%- endif -%}
 
                                   <span class="line-item__price line-item__price--compare">{{ line_item.variant.compare_at_price | money }}</span>
@@ -143,7 +142,7 @@
                                   {%- if line_item.final_price == 0 -%}
                                     <span class="line-item__price">{{ 'cart.general.free' | t }}</span>
                                   {%- else -%}
-                                    <span  data-hulkapps-ci-price data-key='{{line_item.key}}' class="line-item__price">{{ line_item.final_price | money }}</span>
+                                    <span class="line-item__price"><span class="bcpo-cart-item-price" data-key="{{line_item.key}}">{{ line_item.final_price | money }}</span></span>
                                   {%- endif -%}
                                 {%- endif -%}
                               </div>
@@ -224,7 +223,7 @@
                           {%- if line_item.final_line_price == 0 -%}
                             {{- 'cart.general.free' | t -}}
                           {%- else -%}
-                            <span data-hulkapps-line-price data-key='{{line_item.key}}' >{{ line_item.final_line_price | money }}</span>
+                            <span><span class="bcpo-cart-item-line-price" data-key="{{line_item.key}}">{{ line_item.final_line_price | money }}</span></span>
                           {%- endif -%}
                         </td>
                       </tr>
@@ -365,7 +364,7 @@
 
                     <div class="cart-recap__price-line text--pull">
                       <span class="cart-recap__price-line-label">{{ 'cart.general.total' | t }}</span>
-                      <span  data-hulkapps-cart-total class="cart-recap__price-line-price">{{ cart.total_price | money_with_currency }}</span>
+                      <span class="cart-recap__price-line-price"><span class="bcpo-cart-original-total">{{ cart.total_price | money_with_currency }}</span></span>
                     </div>
 
                     {%- comment -%}
@@ -838,3 +837,4 @@
   ]
 }
 {% endschema %}
+<!-- bcpo done -->

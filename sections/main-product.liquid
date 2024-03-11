@@ -22,7 +22,7 @@
 
 <section data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
   {%- if template != 'product.quick-view' -%}
-    <div class="container main-product--parent container--flush">
+    <div class="container container--flush">
       <div class="page__sub-header">
         <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
           <ol class="breadcrumb__list" role="list">
@@ -70,7 +70,7 @@
           {%- endif -%}
 
           <div class="product-block-list__item product-block-list__item--info">
-            {%- render 'product-info', block:block -%}
+            {%- render 'product-info' -%}
           </div>
 
           {%- for block in section.blocks -%}
@@ -175,7 +175,6 @@
                   </div>
                 {%- endif -%}
 
-          
             {%- when 'liquid' -%}
               {%- comment -%}
               --------------------------------------------------------------------------------------
@@ -250,13 +249,27 @@
 
               {%- comment -%}
               --------------------------------------------------------------------------------------
+              REVIEWS
+              --------------------------------------------------------------------------------------
+              {%- endcomment -%}
+              {%- when 'reviews' -%}
+                <div class="product-block-list__item product-block-list__item--reviews" {{ block.shopify_attributes }}>
+                  <span id="product-reviews" class="anchor"></span>
+
+                  <div class="card">
+                    <div class="card__section">
+                      {%- assign reviews_count = product.metafields.spr.reviews | split: '<meta itemprop="reviewCount" content="' | last | split: '">' | first | times: 1 -%}
+                      <div id="shopify-product-reviews" class="spr-reviews {% if reviews_count > 0 %}spr-reviews--has-reviews{% endif %}" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+                    </div>
+                  </div>
+                </div>
+
+              {%- comment -%}
+              --------------------------------------------------------------------------------------
               TRUST BADGE
               --------------------------------------------------------------------------------------
               {%- endcomment -%}
 
-              {%- when '@app' -%}
-            {%- render block -%}
-              
               {%- when 'trust' -%}
                 {%- if block.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
                   {%- assign show_payment_icons = true -%}
@@ -400,7 +413,7 @@
     </div>
   {%- endif -%}
 </section>
-<script type="text/javascript"> function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } saLoadScript("https://www.shopperapproved.com/widgets/group2.0/xxxxx.js"); </script>
+
 <script>
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
   ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
@@ -546,57 +559,6 @@
       ]
     },
     {
-      "type":"upsell_product",
-      "name":"Upsell Product",
-      "settings":[
-        
-      ]
-    },
-    {
-      "type":"contact-form",
-  "name": "Contact form",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Form"
-    },
-    {
-      "type": "text",
-      "id": "form_heading",
-      "label": "Heading"
-    },
-    {
-      "type": "textarea",
-      "id": "form_content",
-      "label": "Content"
-    },
-        {
-          "type": "text",
-          "id": "title_2",
-          "label": "Name",
-          "default": "Custom field"
-        },
-        {
-          "type": "text",
-          "id": "option_1",
-          "label": "Values",
-          "default": "value 1"
-        },
-    {
-          "type": "text",
-          "id": "option_2",
-          "label": "Values",
-          "default": "value 1"
-        },
-    {
-          "type": "text",
-          "id": "option_3",
-          "label": "Values",
-          "default": "value 1"
-        }
-      ]
-    },
-    {
       "type": "buy_buttons",
       "name": "Buy buttons",
       "limit": 1,
@@ -629,102 +591,6 @@
           "type": "richtext",
           "id": "content",
           "label": "Text"
-        }
-      ]
-    },
-    {
-      "type":"icon-with-text",
-      "name":"Icon With Text",
-      "settings": [
-        {
-          "type":"image_picker",
-          "id":"block_icon",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text",
-          "label":"Text"
-        },
-        {
-          "type":"image_picker",
-          "id":"block_icon_2",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading_2",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text_2",
-          "label":"Text"
-        },
-        {
-          "type":"image_picker",
-          "id":"block_icon_3",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading_3",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text_3",
-          "label":"Text"
-        },
-         {
-          "type":"image_picker",
-          "id":"block_icon_4",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading_4",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text_4",
-          "label":"Text"
-        },
-         {
-          "type":"image_picker",
-          "id":"block_icon_5",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading_5",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text_5",
-          "label":"Text"
-        },
-         {
-          "type":"image_picker",
-          "id":"block_icon_6",
-          "label":"Add Icon"
-        },
-        {
-          "type":"text",
-          "id":"icon_heading_6",
-          "label":"Heading"
-        },
-        {
-          "type":"textarea",
-          "id":"icon_text_6",
-          "label":"Text"
         }
       ]
     },
@@ -893,6 +759,17 @@
           "id": "show_quick_buy",
           "label": "Show quick buy",
           "default": true
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "name": "Reviews",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "You need to install [Shopify's free Product Reviews](https://apps.shopify.com/product-reviews) app before enabling those options."
         }
       ]
     },
